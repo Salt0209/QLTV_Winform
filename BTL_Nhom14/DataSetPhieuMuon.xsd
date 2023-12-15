@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetPhieuMuon" targetNamespace="http://tempuri.org/DataSetPhieuMuon.xsd" xmlns:mstns="http://tempuri.org/DataSetPhieuMuon.xsd" xmlns="http://tempuri.org/DataSetPhieuMuon.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLTVConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLTVConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BTL_Nhom14.Properties.Settings.GlobalReference.Default.QLTVConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLTVConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tblMuonTra.sMaMT, tblMuonTra.sMaSV, tblSinhVien.sTenSV, tblSinhVien.sSDT, tblCTMuonTra.sMasach, tblSach.sTensach, tblCTMuonTra.dNgaytra
+FROM            tblMuonTra INNER JOIN
+                         tblSinhVien ON tblMuonTra.sMaSV = tblSinhVien.sMaSV INNER JOIN
+                         tblCTMuonTra ON tblMuonTra.sMaMT = tblCTMuonTra.sMaMT INNER JOIN
+                         tblSach ON tblCTMuonTra.sMasach = tblSach.sMasach</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sMaMT" DataSetColumn="sMaMT" />
+              <Mapping SourceColumn="sMaSV" DataSetColumn="sMaSV" />
+              <Mapping SourceColumn="sTenSV" DataSetColumn="sTenSV" />
+              <Mapping SourceColumn="sSDT" DataSetColumn="sSDT" />
+              <Mapping SourceColumn="sMasach" DataSetColumn="sMasach" />
+              <Mapping SourceColumn="sTensach" DataSetColumn="sTensach" />
+              <Mapping SourceColumn="dNgaytra" DataSetColumn="dNgaytra" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetPhieuMuon" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPhieuMuon" msprop:Generator_UserDSName="DataSetPhieuMuon">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sMaMT" msprop:Generator_ColumnVarNameInTable="columnsMaMT" msprop:Generator_ColumnPropNameInRow="sMaMT" msprop:Generator_ColumnPropNameInTable="sMaMTColumn" msprop:Generator_UserColumnName="sMaMT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sMaSV" msprop:Generator_ColumnVarNameInTable="columnsMaSV" msprop:Generator_ColumnPropNameInRow="sMaSV" msprop:Generator_ColumnPropNameInTable="sMaSVColumn" msprop:Generator_UserColumnName="sMaSV">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sTenSV" msprop:Generator_ColumnVarNameInTable="columnsTenSV" msprop:Generator_ColumnPropNameInRow="sTenSV" msprop:Generator_ColumnPropNameInTable="sTenSVColumn" msprop:Generator_UserColumnName="sTenSV" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sSDT" msprop:Generator_ColumnVarNameInTable="columnsSDT" msprop:Generator_ColumnPropNameInRow="sSDT" msprop:Generator_ColumnPropNameInTable="sSDTColumn" msprop:Generator_UserColumnName="sSDT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sMasach" msprop:Generator_ColumnVarNameInTable="columnsMasach" msprop:Generator_ColumnPropNameInRow="sMasach" msprop:Generator_ColumnPropNameInTable="sMasachColumn" msprop:Generator_UserColumnName="sMasach">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sTensach" msprop:Generator_ColumnVarNameInTable="columnsTensach" msprop:Generator_ColumnPropNameInRow="sTensach" msprop:Generator_ColumnPropNameInTable="sTensachColumn" msprop:Generator_UserColumnName="sTensach" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dNgaytra" msprop:Generator_ColumnVarNameInTable="columndNgaytra" msprop:Generator_ColumnPropNameInRow="dNgaytra" msprop:Generator_ColumnPropNameInTable="dNgaytraColumn" msprop:Generator_UserColumnName="dNgaytra" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
